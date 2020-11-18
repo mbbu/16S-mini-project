@@ -10,7 +10,7 @@ This project creates a workflow for 16SrRNA analysis for researchers.The 16S rRN
 ## Tools Used
 
 | Phases | Tools Used | Purpose | Download Link |
-| --------------- | --------------- | --------------- |
+| --------------- |--------------- |--------------- | --------------- |
 | Phase 1 | FASTQC | Quality check/plots and stats | [click here to download](http://www.bioinformatics.babraham.ac.uk/projects/fastqc )|
 | Phase 1 | Trimmomatic | Trim and filter reads | [click here to download](http://www.usadellab.org/cms/?page=trimmomatic) |
 | Phase 1 | PEAR | stitching paired reads | [click here to download](https://cme.h-its.org/exelixis/web/software/pear/doc.html) |
@@ -28,9 +28,9 @@ This project creates a workflow for 16SrRNA analysis for researchers.The 16S rRN
 
 
 
-## table
+<!-- ## table
 
-| Phases  | Tools Used | Link to Download |
+| Phases  | Tools Used |Purpose | Link to Download |
 | --------  | ------------------- | --------------------- |
 | Phase 1 | FASTQC    | [click here to download](http://www.bioinformatics.babraham.ac.uk/projects/fastqc )| 
 | Phase 1 | Trimmomatic | Trim and filter reads | [click here to download](http://www.usadellab.org/cms/?page=trimmomatic) |
@@ -43,7 +43,7 @@ This project creates a workflow for 16SrRNA analysis for researchers.The 16S rRN
 | Phase 2 | FastTree | Create Phylogenetic tree| [click here to download](http://www.microbesonline.org/fasttree/)|
 | Phase 3 | QIIME | Alpha diversity | [click here to download](https://qiime.org/) |
 | Phase 3 | QIIME | Beta Diversity |[click here to download](https://qiime.org/) |
-          | 
+          |  -->
 
 
 ## Setting Up And Installation
