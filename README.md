@@ -12,7 +12,7 @@
 
 ## Tools Used
 | Phases | Tools Used | Purpose | Download Link |
-| -------------- | :--------- | ----------: | :----------: |
+| Phase 1 | FASTQC | Quality check | http://www.bioinformatics.babraham.ac.uk/projects/fastqc |
 | -------------- | :--------- | ----------: | :----------: |
 | -------------- | :--------- | ----------: | :----------: |
 | -------------- | :--------- | ----------: | :----------: |
