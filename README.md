@@ -23,6 +23,19 @@ This project creates a workflow for 16SrRNA analysis for researchers.The 16S rRN
 | Phase 3 | QIIME | Alpha diversity | [click here to download](https://qiime.org/) |
 | Phase 3 | QIIME | Beta Diversity |[click here to download](https://qiime.org/) |
 
+
+
+
+
+
+## table
+
+| Header 1  | Another header here | This is a long header |
+| --------  | ------------------- | --------------------- |
+| Some data | Some more data      | data                  | 
+| data      | Some long data here | more data             | 
+
+
 ## Setting Up And Installation
 
 This workflow assumes that you have already installed all tools required as mentioned above.
