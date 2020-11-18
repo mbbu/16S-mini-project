@@ -30,9 +30,9 @@ This project creates a workflow for 16SrRNA analysis for researchers.The 16S rRN
 
 ## table
 
-| Header 1  | Another header here | This is a long header |
+| Phases  | Tools Used | Link to Download |
 | --------  | ------------------- | --------------------- |
-| Some data | Some more data      | data                  | 
+| Phase 1 | FASTQC    | [click here to download](http://www.bioinformatics.babraham.ac.uk/projects/fastqc )| 
 | data      | Some long data here | more data             | 
 
 
