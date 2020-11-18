@@ -17,3 +17,4 @@
 
 
 ## Licence
+[MIT](https://github.com/mbbu/16S-mini-project/blob/main/LICENSE)
