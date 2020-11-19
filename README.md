@@ -1,6 +1,11 @@
 ## About Project
 This project creates a workflow for 16SrRNA analysis for researchers.The 16S rRNA is a ribosomal RNA necessary for the synthesis of all prokaryotic proteins.To read more on this [click here](https://www.cd-genomics.com/blog/16s-rrna-one-of-the-most-important-rrnas/).
 
+
+#### sample data
+Datasets used for this workflow can be downloaded from [here](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/dataset1/)
+
+
 ## Collaborators
 
 1. [Bryan Abuchery](https://github.com/BryanAbuchery)
