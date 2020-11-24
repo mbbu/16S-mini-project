@@ -9,13 +9,13 @@ mv *.zip results/ && mv *.html results/
 rm -r *.zip
 rm -r *.html
 
-for file in *_fastqc
-do
-cat $file/summary.txt >> fastqc_summary.txt
+#for file in *_fastqc
+#do
+#cat $file/summary.txt >> fastqc_summary.txt
 
-done
+#done
 
-cd ..
+#cd ..
 
 #trim the reads with trimmomatic
 
