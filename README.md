@@ -20,7 +20,7 @@ Datasets used for this workflow can be downloaded from [here](http://h3data.cbio
 | Phase 1 | Trimmomatic | Trim and filter reads | [click here to download](http://www.usadellab.org/cms/?page=trimmomatic) |
 | Phase 1 | PEAR | stitching paired reads | [click here to download](https://cme.h-its.org/exelixis/web/software/pear/doc.html) |
 | Phase 1 | UCHIIME | Chimera detection | [click here to download](http://drive5.com/usearch/manual/uchime_algo.html)|
-| Phase 2 | QIIME | OTU picking| [click here to download](http://qiime.org/)|
+| Phase 2 | UPARSE | OTU picking  and Chimera removal| [click here to download](http://drive5.com/usearch/manual/uchime_algo.html)|
 | Phase 2 | QIIME2 | ASV prediction| [click here to download](https://qiime2.org/) |
 | Phase 2 | UCLUST | Classification | [click here to download](http://www.drive5.com/uclust/downloads1_2_22q.html)|
 | Phase 2 | PyNAST | Alignment | [click here to download](http://www.ncbi.nlm.nih.gov/pubmed/19914921) |
