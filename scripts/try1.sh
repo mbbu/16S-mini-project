@@ -1,44 +1,56 @@
 #! /usr/bin/env bash
 #  create a folder of your raw reads
-mkdir sample_data
+# Our assumption is that your data has been downloaded on this folder
+# mkdir sample_data
 # folder that has all your fastq files
-cd  sample_data
+# add all your fastq files here
+# cd  sample_data
+# 
 # checking quality using fastq
-for file in *.fastqc
-    do
-    data_file=`basename $file`
+# for file in *.fastq
+# lopps through all files
+    # do
+    # checks quality for each file
+    # data_file=`basename $file`
     fastqc  *.fastq 
-    mv *fastq * /results/
-    cd results
-
-    unzip  *.zip && mv *fastqc /qc_folder
 # add summary of each file into one txt
 
-done
 # trimmomatic using fastq files
-for reads in *.fastq
- do
-   base=$(basename ${reads}.fastq.)
-   trimmomatic PE ${reads} ${base}.fastq\
-#    channel output and change the file names
-                ${base}_R1_trim.fastq ${base}_1un_trim.fastq \
-                ${base}_R2_trim.fastq ${base}_2un_trim.fastq \
+# for reads in *.fastq
+#  do
+#    base=$(basename ${reads}.fastq.)
+
+#    base="${filename%*_*.fastq}"
+#    trimmomatic PE ${reads} ${base}.fastq\
+# #    channel output and change the file names
+#                 ${base}_R1_trim.fastq ${base}_1un_trim.fastq \
+#                 ${base}_R2_trim.fastq ${base}_2un_trim.fastq \
+#                 SLIDINGWINDOW:4:20  LEADING:3 TRAILING:3 MINLEN:20
+#  done
+
+
+for file in *_R1.fastq
+do
+   base=$(basename ${file} _R1.fastq)
+   trimmomatic PE ${file} ${base}_R2.fastq \
+                ${base}_R1_trim.fastq ${base}_R1un_trim.fastq\
+                ${base}_R2_trim.fastq ${base}_R2un_trim.fastq\
                 SLIDINGWINDOW:4:20  LEADING:3 TRAILING:3 MINLEN:20
  done
 
 
 #  work with proper file formats
-# Change all file formarts
+# Change all file formats
 # select all foward and reverse reads
 # peared end stitching using PEAR
 for file in *_trim.fastq
 do
-    pear -f *_R1_trim  -r *_R2_trim -o output_channel
+    pear -f *R1_trim.fastq -r *R2_trim.fastq -o output_channel.fastq
 done
 
 # Uchime
 
-for files in *assembled.fastq
+for files in *output_channel.fastq
 do
 # download the bacterial data from silva for bacteria data
 wget https://mothur.s3.us-east-2.amazonaws.com/wiki/silva.bacteria.zip
