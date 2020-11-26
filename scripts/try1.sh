@@ -86,4 +86,24 @@ done
 
 
 
+qiime tools import --input-path otus.fastq --output-path otus.qza --type 'FeatureData[Sequence]'
 
+# convert otutab.txt to hdf5 formart which is BIOM 
+
+biom convert -i table.txt -o table.from_txt_hdf5.biom --table-type="OTU table" --to-hdf5
+# Import the table to qiime as a feature table
+
+  qiime tools import --input-path table.from_txt_hdf5.biom --type 'FeatureTable[Frequency]' --output-path otutable111.qza
+#  core -metric diversity that does both alpha and beta
+qiime tools import --input-path otus.fastq --output-path otus.qza --type 'FeatureData[Sequence]'
+
+# convert otutab.txt to hdf5 formart which is BIOM 
+
+biom convert -i table.txt -o table.from_txt_hdf5.biom --table-type="OTU table" --to-hdf5
+# Import the table to qiime as a feature table
+
+  qiime tools import --input-path table.from_txt_hdf5.biom --type 'FeatureTable[Frequency]' --output-path otutable111.qza
+#  core -metric diversity that does both alpha and beta
+
+
+qiime metadata tabulate --m-input-file practice.dataset1.metadata.tsv --o-visualization tabulated-sample-metadata.qzv
