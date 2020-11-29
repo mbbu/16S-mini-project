@@ -38,15 +38,14 @@ For you to be able to follow this workflow;
 
 1. Install Qiime2 by following [this link](https://docs.qiime2.org/2020.8/install/native/).
 
-2. Activate the Qiime2 environment and conda install Fastqc and Trimmomatic as guided by the above links in the "Tools used" section. Alternatively, there is a .yml Qiime2-2020.8 environment on this repo. After cloning the repo, on the terminal; `cd` into "Qiime_env" and bash `conda create -f try.yml`. After running successfully, bash `conda activate Qiime2-2020.8`.
-
+2. Activate the Qiime2 environment and conda install Fastqc and Trimmomatic as guided by the above links in the "Tools used" section. Alternatively, there is a .yml Qiime2-2020.8 environment on this repo. After cloning the repo, on the terminal; `cd` into "Qiime_env" and bash `conda create -f try.yml` After running successfully, bash `conda activate Qiime2-2020.8`
 3. Download USEARCH as the Uchime and Uparse tools are depnded on it. However, USEARCH does not have an installation set up. To be able to use USEARCH, follow [this link](http://www.metagenomics.wiki/tools/16s/qiime/install/usearch61).
 
 _Note_: Tools in USEARCH could be used only in so far as Chimera detection. This is the 32-bit version which is licensed for free use. The section running from Classification until Alpha and Beta Diversity Analyses requires Qiime2 tools, hence working from the Qiime2 environment.
 
 4. Download the [Dataset](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/dataset1/) and the [metadata](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/practice.dataset1.metadata.tsv) as described in the links above.
 
-5. Move the directory containing your data set and metadata into the 16S-mini-project. Bash `cd scripts && cp 16srna.sh ../path/to/your/dataset`. To run the workflow; bash `cd path/to/your/dataset && bash 16srna.sh`. 
+5. Move the directory containing your data set and metadata into the 16S-mini-project. Bash `cd scripts && cp 16srna.sh ../path/to/your/dataset` To run the workflow; bash `cd path/to/your/dataset && bash 16srna.sh`
 
 
 
