@@ -19,9 +19,9 @@ Datasets used for this workflow can be downloaded from [here](http://h3data.cbio
 | Phases | Tools Used | Purpose | Download Link |
 | --------------- |--------------- |--------------- | --------------- |
 | Phase 1 | FASTQC | Quality check/plots and stats | [click here to download](https://anaconda.org/bioconda/fastqc)|
-| Phase 1 | Trimmomatic | Trim and filter reads | [click here to download](https://anaconda.org/bioconda/trimmomatic) |
-| Phase 1 | PEAR | stitching paired reads | [click here to download](https://anaconda.org/bioconda/pear) |
-| Phase 1 | UCHIIME | Chimera detection | [click here to download](http://www.metagenomics.wiki/tools/16s/qiime/install/usearch61)|
+| Phase 1 | Trimmomatic | Trim and Filter reads | [click here to download](https://anaconda.org/bioconda/trimmomatic) |
+| Phase 1 | UPARSE | Stitching paired reads | [click here to download](http://www.metagenomics.wiki/tools/16s/qiime/install/usearch61)) |
+| Phase 1 | UCHIME | Chimera detection | [click here to download](http://www.metagenomics.wiki/tools/16s/qiime/install/usearch61)|
 | Phase 2 | UPARSE | OTU picking  and Chimera removal| [click here to download](http://www.metagenomics.wiki/tools/16s/qiime/install/usearch61)|
 | Phase 2 | QIIME2 | Classification | [click here to download](https://docs.qiime2.org/2020.8/)|
 | Phase 2 | QIIME2 | Alignment | [click here to download](https://docs.qiime2.org/2020.8/) |
@@ -32,7 +32,7 @@ Datasets used for this workflow can be downloaded from [here](http://h3data.cbio
 
 
 
-## Setting Up And Installation
+## Set Up And Installation
 
 For you to be able to follow this workflow;
 
@@ -48,9 +48,6 @@ _Note_: Tools in USEARCH could be used only in so far as Chimera detection. This
 
 5. Move the directory containing your data set and metadata into the 16S-mini-project. bash `cd scripts && cp 16srna.sh ../path/to/your/dataset`. To run the workflow; bash `cd path/to/your/dataset && bash 16srna.sh`. 
 
-
-
-## B.D.D
 
 
 ## Bugs
