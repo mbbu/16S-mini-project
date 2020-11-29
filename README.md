@@ -20,7 +20,7 @@ Datasets used for this workflow can be downloaded from [here](http://h3data.cbio
 | --------------- |--------------- |--------------- | --------------- |
 | Phase 1 | FASTQC | Quality check/plots and stats | [click here to download](https://anaconda.org/bioconda/fastqc)|
 | Phase 1 | Trimmomatic | Trim and Filter reads | [click here to download](https://anaconda.org/bioconda/trimmomatic) |
-| Phase 1 | UPARSE | Stitching paired reads | [click here to download](http://www.metagenomics.wiki/tools/16s/qiime/install/usearch61)) |
+| Phase 1 | UPARSE | Stitching paired reads | [click here to download](http://www.metagenomics.wiki/tools/16s/qiime/install/usearch61) |
 | Phase 1 | UCHIME | Chimera detection | [click here to download](http://www.metagenomics.wiki/tools/16s/qiime/install/usearch61)|
 | Phase 2 | UPARSE | OTU picking  and Chimera removal| [click here to download](http://www.metagenomics.wiki/tools/16s/qiime/install/usearch61)|
 | Phase 2 | QIIME2 | Classification | [click here to download](https://docs.qiime2.org/2020.8/)|
