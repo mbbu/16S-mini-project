@@ -40,7 +40,7 @@ For you to be able to follow this workflow;
 
 2. Activate the Qiime2 environment and conda install Fastqc, Trimmomatic and Pear as guided by the above links in the "Tools used" section. Alternatively, there is a .yml Qiime2-2020.8 environment on this repo. After cloning the repo, on the terminal; `cd` into "Qiime_env" and bash `conda create -f try.yml`. After running successfully, bash `conda activate Qiime2-2020.8`.
 
-3. Install USEARCH as the Uchime and Uparse tools are depnded on it. However, USEARCH does not have an installation set up. To be able to use USEARCH, follow [this link](http://www.metagenomics.wiki/tools/16s/qiime/install/usearch61).
+3. Download USEARCH as the Uchime and Uparse tools are depnded on it. However, USEARCH does not have an installation set up. To be able to use USEARCH, follow [this link](http://www.metagenomics.wiki/tools/16s/qiime/install/usearch61).
 
 _Note_: Tools in USEARCH could be used only in so far as Chimera detection. This is the 32-bit version which is licensed for free use. The section running from Classification until Alpha and Beta Diversity Analyses requires Qiime2 tools, hence working from the Qiime2 environment.
 
