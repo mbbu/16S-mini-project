@@ -3,7 +3,7 @@ This project creates a workflow for 16SrRNA analysis for researchers.The 16S rRN
 
 
 ## Sample data
-Datasets used for this workflow can be downloaded from [here](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/dataset1/). The Dataset metadata can be downloded from [this link](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/practice.dataset1.metadata.tsv). After downloading the metadata file, open it with your favourite text editor and change the column headers into lowercase.
+Datasets used for this workflow can be downloaded from [here](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/dataset1/). The Dataset metadata can be downloded from [this link](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/practice.dataset1.metadata.tsv). After downloading the metadata file, open it with your favourite text editor and change the column headers into lowercase. Ensure that both your dataset and metadata are in one directory.
 
 
 
@@ -46,7 +46,7 @@ _Note_: Tools in USEARCH could be used only in so far as Chimera detection. This
 
 4. Download the [Dataset](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/dataset1/) and the [metadata](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/practice.dataset1.metadata.tsv) as described in the links above.
 
-5. Move the directory containing your data set and metadata into the 16S-mini-project. bash `cd scripts && cp 16srna.sh ../path/to/your/dataset`. To run the workflow; bash `cd path/to/your/dataset && bash 16srna.sh`. 
+5. Move the directory containing your data set and metadata into the 16S-mini-project. Bash `cd scripts && cp 16srna.sh ../path/to/your/dataset`. To run the workflow; bash `cd path/to/your/dataset && bash 16srna.sh`. 
 
 
 
