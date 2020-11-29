@@ -2,7 +2,7 @@
 This project creates a workflow for 16SrRNA analysis for researchers.The 16S rRNA is a ribosomal RNA necessary for the synthesis of all prokaryotic proteins.To read more on this [click here](https://www.cd-genomics.com/blog/16s-rrna-one-of-the-most-important-rrnas/).
 
 
-#### sample data
+## Sample data
 Datasets used for this workflow can be downloaded from [here](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/dataset1/). The Dataset metadata can be downloded from [this link](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/practice.dataset1.metadata.tsv). After downloading the metadata file, open it with your favourite text editor and change the column headers into lowercase.
 
 
@@ -12,6 +12,7 @@ Datasets used for this workflow can be downloaded from [here](http://h3data.cbio
 1. [Bryan Abuchery](https://github.com/BryanAbuchery)
 
 2. [Virginiah Periah](https://github.com/virginiah894)
+
 
 ## Tools Used
 
@@ -46,7 +47,9 @@ _Note_: Tools in USEARCH could be used only in so far as Chimera detection. This
 4. Download the [Dataset](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/dataset1/) and the [metadata](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/practice.dataset1.metadata.tsv) as described in the links above.
 
 
+
 ## B.D.D
+
 
 ## Bugs
 There are no known bugs, but incase of any feel free to reach any collaborators of this repository.
