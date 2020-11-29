@@ -38,7 +38,7 @@ For you to be able to follow this workflow;
 
 1. Install Qiime2 by following [this link](https://docs.qiime2.org/2020.8/install/native/).
 
-2. Activate the Qiime2 environment and conda install Fastqc, Trimmomatic and Pear as guided by the above links in the "Tools used" section. Alternatively, there is a .yml Qiime2-2020.8 environment on this repo. After cloning the repo, on the terminal; `cd` into "Qiime_env" and bash `conda create -f try.yml`. After running successfully, bash `conda activate Qiime2-2020.8`.
+2. Activate the Qiime2 environment and conda install Fastqc and Trimmomatic as guided by the above links in the "Tools used" section. Alternatively, there is a .yml Qiime2-2020.8 environment on this repo. After cloning the repo, on the terminal; `cd` into "Qiime_env" and bash `conda create -f try.yml`. After running successfully, bash `conda activate Qiime2-2020.8`.
 
 3. Download USEARCH as the Uchime and Uparse tools are depnded on it. However, USEARCH does not have an installation set up. To be able to use USEARCH, follow [this link](http://www.metagenomics.wiki/tools/16s/qiime/install/usearch61).
 
