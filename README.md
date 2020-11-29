@@ -46,6 +46,8 @@ _Note_: Tools in USEARCH could be used only in so far as Chimera detection. This
 
 4. Download the [Dataset](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/dataset1/) and the [metadata](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/practice.dataset1.metadata.tsv) as described in the links above.
 
+5. Move the directory containing your data set and metadata into the 16S-mini-project. bash `cd scripts && cp 16srna.sh ../path/to/your/dataset`. To run the workflow; bash `cd path/to/your/dataset && bash 16srna.sh`. 
+
 
 
 ## B.D.D
