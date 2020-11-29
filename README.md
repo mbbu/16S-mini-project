@@ -3,7 +3,8 @@ This project creates a workflow for 16SrRNA analysis for researchers.The 16S rRN
 
 
 #### sample data
-Datasets used for this workflow can be downloaded from [here](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/dataset1/)
+Datasets used for this workflow can be downloaded from [here](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/dataset1/). The Dataset metadata can be downloded from [this link](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/practice.dataset1.metadata.tsv). After downloading the metadata file, open it with your favourite text editor and change the column headers into lowercase.
+
 
 
 ## Collaborators
@@ -16,45 +17,31 @@ Datasets used for this workflow can be downloaded from [here](http://h3data.cbio
 
 | Phases | Tools Used | Purpose | Download Link |
 | --------------- |--------------- |--------------- | --------------- |
-| Phase 1 | FASTQC | Quality check/plots and stats | [click here to download](http://www.bioinformatics.babraham.ac.uk/projects/fastqc )|
-| Phase 1 | Trimmomatic | Trim and filter reads | [click here to download](http://www.usadellab.org/cms/?page=trimmomatic) |
-| Phase 1 | PEAR | stitching paired reads | [click here to download](https://cme.h-its.org/exelixis/web/software/pear/doc.html) |
-| Phase 1 | UCHIIME | Chimera detection | [click here to download](http://drive5.com/usearch/manual/uchime_algo.html)|
-| Phase 2 | UPARSE | OTU picking  and Chimera removal| [click here to download](http://drive5.com/usearch/manual/uchime_algo.html)|
-| Phase 2 | QIIME2 | ASV prediction| [click here to download](https://qiime2.org/) |
-| Phase 2 | UCLUST | Classification | [click here to download](http://www.drive5.com/uclust/downloads1_2_22q.html)|
-| Phase 2 | PyNAST | Alignment | [click here to download](http://www.ncbi.nlm.nih.gov/pubmed/19914921) |
-| Phase 2 | FastTree | Create Phylogenetic tree| [click here to download](http://www.microbesonline.org/fasttree/)|
-| Phase 3 | QIIME | Alpha diversity | [click here to download](https://qiime.org/) |
-| Phase 3 | QIIME | Beta Diversity |[click here to download](https://qiime.org/) |
+| Phase 1 | FASTQC | Quality check/plots and stats | [click here to download](https://anaconda.org/bioconda/fastqc)|
+| Phase 1 | Trimmomatic | Trim and filter reads | [click here to download](https://anaconda.org/bioconda/trimmomatic) |
+| Phase 1 | PEAR | stitching paired reads | [click here to download](https://anaconda.org/bioconda/pear) |
+| Phase 1 | UCHIIME | Chimera detection | [click here to download](http://www.metagenomics.wiki/tools/16s/qiime/install/usearch61)|
+| Phase 2 | UPARSE | OTU picking  and Chimera removal| [click here to download](http://www.metagenomics.wiki/tools/16s/qiime/install/usearch61)|
+| Phase 2 | QIIME2 | Classification | [click here to download](https://docs.qiime2.org/2020.8/)|
+| Phase 2 | QIIME2 | Alignment | [click here to download](https://docs.qiime2.org/2020.8/) |
+| Phase 2 | QIIME2 | Create Phylogenetic tree| [click here to download](https://docs.qiime2.org/2020.8/)|
+| Phase 3 | QIIME2 | Alpha diversity | [click here to download](https://docs.qiime2.org/2020.8/) |
+| Phase 3 | QIIME2 | Beta Diversity |[click here to download](https://docs.qiime2.org/2020.8/)|
 
 
-
-
-
-
-<!-- ## table
-
-| Phases  | Tools Used |Purpose | Link to Download |
-| --------  | ------------------- | --------------------- |
-| Phase 1 | FASTQC    | [click here to download](http://www.bioinformatics.babraham.ac.uk/projects/fastqc )| 
-| Phase 1 | Trimmomatic | Trim and filter reads | [click here to download](http://www.usadellab.org/cms/?page=trimmomatic) |
-| Phase 1 | PEAR | stitching paired reads | [click here to download](https://cme.h-its.org/exelixis/web/software/pear/doc.html) |
-| Phase 1 | UCHIIME | Chimera detection | [click here to download](http://drive5.com/usearch/manual/uchime_algo.html)|
-| Phase 1 | QIIME | OTU picking| [click here to download](http://qiime.org/)|
-| Phase 2 | QIIME2 | ASV prediction| [click here to download](https://qiime2.org/) |
-| Phase 2 | UCLUST | Classification | [click here to download](http://www.drive5.com/uclust/downloads1_2_22q.html)|
-| Phase 2 | PyNAST | Alignment | [click here to download](http://www.ncbi.nlm.nih.gov/pubmed/19914921) |
-| Phase 2 | FastTree | Create Phylogenetic tree| [click here to download](http://www.microbesonline.org/fasttree/)|
-| Phase 3 | QIIME | Alpha diversity | [click here to download](https://qiime.org/) |
-| Phase 3 | QIIME | Beta Diversity |[click here to download](https://qiime.org/) |
-          |  -->
 
 
 ## Setting Up And Installation
 
-This workflow assumes that you have already installed all tools required as mentioned above.
+For you to be able to follow this workflow;
 
+1. Install Qiime2 by following [this link](https://docs.qiime2.org/2020.8/install/native/).
+
+2. Activate the Qiime2 environment and conda install Fastqc, Trimmomatic and Pear as guided by the above links in the "Tools used" section. Alternatively, there is a .yml Qiime2-2020.8 environment on this repo. After cloning the repo, on the terminal; `cd` into "Qiime_env" and bash `conda create -f try.yml`. After running successfully, bash `conda activate Qiime2-2020.8`.
+
+3. Install USEARCH as the Uchime and Uparse tools are depnded on it. However, USEARCH does not have an installation set up. To be able to use USEARCH, follow [this link](http://www.metagenomics.wiki/tools/16s/qiime/install/usearch61).
+
+_Note_: Tools in USEARCH could be used only in so far as Chimera detection. This is the 32-bit version which is licensed for free use. The section running from Classification until Alpha and Beta Diversity Analyses requires Qiime2 tools, hence working from the Qiime2 environment.
 
 
 ## B.D.D
