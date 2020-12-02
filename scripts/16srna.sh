@@ -1,4 +1,5 @@
 #! usr/bin/env/bash
+
 #Do FastQc
 fastqc *.fastq
 mkdir fastqc_results
@@ -17,6 +18,17 @@ done
 mkdir trimmomatic_results
 mv *paired* trimmomatic_results/
 cd trimmomatic_results/
+
+#Do quality check for trimmomatic results
+fastqc *_paired.fastq
+mkdir trimmomatic_fastqc_results
+mv *.zip trimmomatic_fastqc_results && mv *.html trimmomatic_fastqc_results
+cd trimmomatic_fastqc_results
+for zip in *.zip; do unzip $zip; done
+cat */summary.txt >> trimmomatic_fastqc_summary.txt
+mv trimmomatic_fastqc_summary.txt ../../
+cd ..
+
 #Merge files
 #Merge Test to determine maximum and minimum length.
 mkdir -p merge_test
