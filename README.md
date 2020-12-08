@@ -47,6 +47,8 @@ _Note_: Tools in USEARCH could be used only in so far as Chimera detection. This
 
 5. Move the directory containing your data set and metadata into the 16S-mini-project. Bash `cd scripts && cp 16srna.sh ../path/to/your/dataset` To run the workflow; bash `cd path/to/your/dataset && bash 16srna.sh`
 
+6. End to End 16S RNA analysis can also be done using Qiime2 feature tools only. This analysis produces different core metrics alpha and beta analyses as well as explores different microbial profiles by assigning taxonomies. To follow this kind route, activate the Qiime2-2020.8 environment, `cd` into Qiime2-E2E-Analysis and `bash scripts/16srna.sh` The scripts follow a download of datasets to analysis end of Qiime2. Please ensure that you read the documentation for each of the scripts used. The automatic manifest file maker was adapted [from this repo](https://github.com/Micro-Biology/BasicBashCode/blob/master/BasicScripts/Q2_manifest_maker.py) The script that exports Qiime2 artifacts into objects that can be used with phyloseq was adopted from [this tutorial](http://john-quensen.com/tutorials/processing-16s-sequences-with-qiime2-and-dada2/) More information about importing dada2 artifacts into phyloseq can also be obtained [from here.](http://john-quensen.com/r/import-dada2-asv-tables-into-phyloseq/)
+
 
 
 ## Bugs
