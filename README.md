@@ -2,8 +2,9 @@
 This project creates a workflow for 16SrRNA analysis for researchers.The 16S rRNA is a ribosomal RNA necessary for the synthesis of all prokaryotic proteins.To read more on this [click here](https://www.cd-genomics.com/blog/16s-rrna-one-of-the-most-important-rrnas/).
 
 
-#### sample data
-Datasets used for this workflow can be downloaded from [here](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/dataset1/)
+## Sample data
+Datasets used for this workflow can be downloaded from [here](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/dataset1/). The Dataset metadata can be downloded from [this link](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/practice.dataset1.metadata.tsv). After downloading the metadata file, open it with your favourite text editor and change the column headers into lowercase. Ensure that both your dataset and metadata are in one directory.
+
 
 
 ## Collaborators
@@ -12,52 +13,43 @@ Datasets used for this workflow can be downloaded from [here](http://h3data.cbio
 
 2. [Virginiah Periah](https://github.com/virginiah894)
 
+
 ## Tools Used
 
 | Phases | Tools Used | Purpose | Download Link |
 | --------------- |--------------- |--------------- | --------------- |
-| Phase 1 | FASTQC | Quality check/plots and stats | [click here to download](http://www.bioinformatics.babraham.ac.uk/projects/fastqc )|
-| Phase 1 | Trimmomatic | Trim and filter reads | [click here to download](http://www.usadellab.org/cms/?page=trimmomatic) |
-| Phase 1 | PEAR | stitching paired reads | [click here to download](https://cme.h-its.org/exelixis/web/software/pear/doc.html) |
-| Phase 1 | UCHIIME | Chimera detection | [click here to download](http://drive5.com/usearch/manual/uchime_algo.html)|
-| Phase 2 | UPARSE | OTU picking  and Chimera removal| [click here to download](http://drive5.com/usearch/manual/uchime_algo.html)|
-| Phase 2 | QIIME2 | ASV prediction| [click here to download](https://qiime2.org/) |
-| Phase 2 | UCLUST | Classification | [click here to download](http://www.drive5.com/uclust/downloads1_2_22q.html)|
-| Phase 2 | PyNAST | Alignment | [click here to download](http://www.ncbi.nlm.nih.gov/pubmed/19914921) |
-| Phase 2 | FastTree | Create Phylogenetic tree| [click here to download](http://www.microbesonline.org/fasttree/)|
-| Phase 3 | QIIME | Alpha diversity | [click here to download](https://qiime.org/) |
-| Phase 3 | QIIME | Beta Diversity |[click here to download](https://qiime.org/) |
+| Phase 1 | FASTQC | Quality check/plots and stats | [click here to download](https://anaconda.org/bioconda/fastqc)|
+| Phase 1 | Trimmomatic | Trim and Filter reads | [click here to download](https://anaconda.org/bioconda/trimmomatic) |
+| Phase 1 | UPARSE | Stitching paired reads | [click here to download](http://www.metagenomics.wiki/tools/16s/qiime/install/usearch61) |
+| Phase 1 | UCHIME | Chimera detection | [click here to download](http://www.metagenomics.wiki/tools/16s/qiime/install/usearch61)|
+| Phase 2 | UPARSE | OTU picking  and Chimera removal| [click here to download](http://www.metagenomics.wiki/tools/16s/qiime/install/usearch61)|
+| Phase 2 | QIIME2 | Classification | [click here to download](https://docs.qiime2.org/2020.8/)|
+| Phase 2 | QIIME2 | Alignment | [click here to download](https://docs.qiime2.org/2020.8/) |
+| Phase 2 | QIIME2 | Create Phylogenetic tree| [click here to download](https://docs.qiime2.org/2020.8/)|
+| Phase 3 | QIIME2 | Alpha diversity | [click here to download](https://docs.qiime2.org/2020.8/) |
+| Phase 3 | QIIME2 | Beta Diversity |[click here to download](https://docs.qiime2.org/2020.8/)|
 
 
 
 
+## Set Up And Installation
+
+For you to be able to follow this workflow;
+
+1. Install Qiime2 by following [this link](https://docs.qiime2.org/2020.8/install/native/).
+
+2. Activate the Qiime2 environment and conda install Fastqc and Trimmomatic as guided by the above links in the "Tools used" section. Alternatively, there is a .yml Qiime2-2020.8 environment on this repo. After cloning the repo, on the terminal; `cd` into "Qiime_env" and bash `conda create -f try.yml` After running successfully, bash `conda activate Qiime2-2020.8`
+3. Download USEARCH as the Uchime and Uparse tools are depnded on it. However, USEARCH does not have an installation set up. To be able to use USEARCH, follow [this link](http://www.metagenomics.wiki/tools/16s/qiime/install/usearch61).
+
+_Note_: Tools in USEARCH could be used only in so far as Chimera detection. This is the 32-bit version which is licensed for free use. The section running from Classification until Alpha and Beta Diversity Analyses requires Qiime2 tools, hence working from the Qiime2 environment.
+
+4. Download the [Dataset](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/dataset1/) and the [metadata](http://h3data.cbio.uct.ac.za/assessments/16SrRNADiversityAnalysis/practice/practice.dataset1.metadata.tsv) as described in the links above.
+
+5. Move the directory containing your data set and metadata into the 16S-mini-project. Bash `cd scripts && cp 16srna.sh ../path/to/your/dataset` To run the workflow; bash `cd path/to/your/dataset && bash 16srna.sh`
+
+6. End to End 16S RNA analysis can also be done using Qiime2 feature tools only. This analysis produces different core metrics alpha and beta analyses as well as explores different microbial profiles by assigning taxonomies. To follow this kind route, activate the Qiime2-2020.8 environment, `cd` into Qiime2-E2E-Analysis and `bash scripts/16srna.sh` The scripts follow a download of datasets to analysis end of Qiime2. Please ensure that you read the documentation for each of the scripts used. The automatic manifest file maker was adapted [from this repo](https://github.com/Micro-Biology/BasicBashCode/blob/master/BasicScripts/Q2_manifest_maker.py) The script that exports Qiime2 artifacts into objects that can be used with phyloseq was adopted from [this tutorial](http://john-quensen.com/tutorials/processing-16s-sequences-with-qiime2-and-dada2/) More information about importing dada2 artifacts into phyloseq can also be obtained [from here.](http://john-quensen.com/r/import-dada2-asv-tables-into-phyloseq/)
 
 
-<!-- ## table
-
-| Phases  | Tools Used |Purpose | Link to Download |
-| --------  | ------------------- | --------------------- |
-| Phase 1 | FASTQC    | [click here to download](http://www.bioinformatics.babraham.ac.uk/projects/fastqc )| 
-| Phase 1 | Trimmomatic | Trim and filter reads | [click here to download](http://www.usadellab.org/cms/?page=trimmomatic) |
-| Phase 1 | PEAR | stitching paired reads | [click here to download](https://cme.h-its.org/exelixis/web/software/pear/doc.html) |
-| Phase 1 | UCHIIME | Chimera detection | [click here to download](http://drive5.com/usearch/manual/uchime_algo.html)|
-| Phase 1 | QIIME | OTU picking| [click here to download](http://qiime.org/)|
-| Phase 2 | QIIME2 | ASV prediction| [click here to download](https://qiime2.org/) |
-| Phase 2 | UCLUST | Classification | [click here to download](http://www.drive5.com/uclust/downloads1_2_22q.html)|
-| Phase 2 | PyNAST | Alignment | [click here to download](http://www.ncbi.nlm.nih.gov/pubmed/19914921) |
-| Phase 2 | FastTree | Create Phylogenetic tree| [click here to download](http://www.microbesonline.org/fasttree/)|
-| Phase 3 | QIIME | Alpha diversity | [click here to download](https://qiime.org/) |
-| Phase 3 | QIIME | Beta Diversity |[click here to download](https://qiime.org/) |
-          |  -->
-
-
-## Setting Up And Installation
-
-This workflow assumes that you have already installed all tools required as mentioned above.
-
-
-
-## B.D.D
 
 ## Bugs
 There are no known bugs, but incase of any feel free to reach any collaborators of this repository.
