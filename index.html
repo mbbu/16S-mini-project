@@ -4,95 +4,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+    
     <title>REPORT</title>
 </head>
 
 <body>
     <h4>16S rRNA REPORT</h4>
-    <h5 style="color: black;">CORE-METRICS SUMMARY</h5>
-
-    
-        <div class="row">
-            <div class="col-md-6">
-                <img src="images/alpha-compare (1).svg" alt="evenness">
-                <a href="images/alpha-compare (1).svg" target="_blank">Link to image</a>
-
-                <p>Alpha diversity evenness distribution</p>
-               
-            </div>
-            <div class="col-md-6">
-                <img src="images/alpha-compare (2).svg" alt="shannon">
-                <a href="images/alpha-compare (2).svg"target="_blank">Link to image</a>
-                <div class="bottom-left">Shannon matrix alpha diversity</div>
-            </div>
+    <div>
+        <p>In this miniproject we created two worklows that can be used to determine microbial communities present in
+            different enivironment using the 16S rRNA analysis</p>
+        <p>Here is a sumary flow chart of tools used on the workflows.The main categories are:</p>
+        <ol>
+            <li>Preprocessing reads.</li>
+            <li>OTU picking,Classification and Phylogenetic tree generation.</li>
+            <li>Measure Diversity and other sttistical analysis.</li>
+        </ol>
+    </div>
+    <div class="row">
+        <div class="col-md-6"> 
+            <h4>QIIME Workflow</h4>
+            <img src="images/E2E QIIME.png" style=" border: 5px solid #555; height: 500px;"  alt="qiime workflow">
+            <h5>Runtime Analysis</h5>
+            <ul>
+                <li>Time Taken: 106mins</li>
+        
+                <li>Hardware Usage- Fair ,user can perform other light tasks while running.</li>
+                <li>Storage - 8.9 G.B </li>
+            </ul>
         </div>
-        <div class="row">
+        <div class="col-md-6">
+            <h4>Multiple-Tools Workflow</h4>
+            <img src="images/uchime.png" style=" border: 5px solid #555; height: 500px;" alt="uparse/uchime">
+            <h5>Runtime Analysis</h5>
+            <ul>
+                <li>Time Taken - 2.5 hrs.</li>
+                <li>Hardware Usage - Intensive,computer freezes.</li>
+                <li>Storage - 8.8 G.B</li>
+            </ul>
+            
+
+         </div>
+       
+         <h5>Alternative Tools Critique</h5>
+            <ol>
+                <li>Trimmomatic vs Prinseq: Gives more trimming options like slidingwindow</li>
+                <li>UPARSE (96% merged) vs PEAR(99% merged): UPARSE does not require the reverse reads while PEAR does. PEAR produces 4 outputs but outputs</li>
+                <li>UCHIME vs Chimeraslayer:  Uchime is faster and detects more chimeras whereas Chimeraslayer requires different formats.</li>
+               
+                <li>UCLUST vs</li>
+            </ol>
+       
+    <h5> Analysis of Results/Metrics Comparions</h5>
+    <p>This is a comparison of the alpha and beta diversity analyses from the two workflows.</p>
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <img src="images/alpha-compare (3).svg" alt="qiime shannon">
+            <a href="images/alpha-compare (3).svg" target="_blank">Link to image</a>
+
+            <p> Alpha Diversity Shannon Index(q.w)</p>
+
+        </div>
+        <div class="col-md-6">
+            <img src="images/alpha-compare (2).svg" alt="shannon">
+            <a href="images/alpha-compare (2).svg" target="_blank">Link to image</a>
+            <div class="bottom-left">Alpha Diversity Shannon Index(o.w)</div>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-md-6">
+            <img src="images/emperor (11).png" alt="jaccard">
+            <a href="images/emperor (11).png" target="_blank">Link to image</a>
+            <div class="bottom-left">Bray Curtis Emperor(q.w)</div>
+
+        </div>
+        <div class="col-md-6">
+            <img src="images/emperor (10).png" alt="jaccard">
+            <a href="images/emperor (10).png" target="_blank">Link to image</a>
+            <div class="bottom-left">Bray Curtis Emperor(o.w)</div>
+        </div>
+    </div>
+    <!-- <div class="row">
+        <div class="col-md-6">
+            <img src="images/emperor (6).png" alt="bray curtis">
+            <a href="images/emperor (6).png" target="_blank">Link to image</a>
+            <div class="bottom-left">Bray Curtis matrix beta diversity scatter against Dog</div>
+
+        </div>
+        <div class="col-md-6">
+            <img src="images/emperor (5).png" alt="bray curtis">
+            <a href="images/emperor (5).png" target="_blank">Link to image</a>
+            <div class="bottom-left">Bray Curtis matrix beta diversity scatter against sample ID</div>
+
+        </div>
+    </div> -->
+
+
+    <div class="container my-4">
+        <p>Other Images from Qiime workflow</p>
     
+   <a class="btn btn-primary" href="images/level-7-bars (1).svg">taxonomy bar</a>
+        <a class="btn btn-indigo"  href="images/alpha-rarefaction.png">Alpha rarefaction/Shannon</a>
+        <a class="btn btn-indigo"  href="images/rareobserved.png">Alpha rarefaction/Observed otus</a>
+        <a class="btn btn-dark-green" href="images/deblur-stats.png">Deblur Stats</a>
+        <a class="btn btn-purple" href="images/tree (1).svg">Rooted Tree</a>
+        <a class="btn btn-primary" href="images/tree (2).svg">Unrooted Tree</a>
+        <a class="btn btn-primary" href="images/bVc7ka1Dm3yUi2DczboC1g.svg">Circular Tree</a>
+        <a class="btn btn-primary" href="images/metadata (2).tsv">Taxonomy Table</a>
+
+            <a class="btn btn-indigo" href="images/emperor (12).png">Unweighted unifrac/Emperor</a>
+    
+      </div>
+    <div id="quiz1">
+        <h4>Input Data Assessment</h4>
+       <ul>
+           <li>The input datasets were of good quality based on the FASTQ results</li>
+           <div class="row">
             <div class="col-md-6">
-                <img src="images/emperor (7).png" alt="jaccard">
-                <a href="images/emperor (7).png"target="_blank">Link to image</a>
-                <div class="bottom-left">Jaccard matrix beta diversity, scatter for Dogs</div>
-              
+                <img src="images/fastq_before.png" alt="">
+                <p>Before Trimmomatic</p>
+
             </div>
             <div class="col-md-6">
-                <img src="images/emperor (8).png" alt="jaccard">
-                <a href="images/emperor (8).png"target="_blank">Link to image</a>
-                <div class="bottom-left">Jaccard matrix beta diversity, scatter sample ID</div>
+                <img src="images/trimmomaticsfastq.png" alt="">
+                <p>After Trimmomatic</p> 
                 
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <img src="images/emperor (6).png" alt="bray curtis">
-                <a href="images/emperor (6).png"target="_blank">Link to image</a>
-                <div class="bottom-left">Bray Curtis matrix beta diversity scatter against Dog</div>
-               
-            </div>
-            <div class="col-md-6">
-                <img src="images/emperor (5).png" alt="bray curtis">
-                <a href="images/emperor (5).png"target="_blank">Link to image</a>
-                <div class="bottom-left">Bray Curtis matrix beta diversity scatter against sample ID</div>
-               
-            </div>
-        </div>
- 
-
-        <p style="text-align:center; margin-top: 12px;"><a href="images/tree.svg" target="_blank">Phylogeny Tree with OTUS</a></p>
-  
-    <div id="quiz1">
-        <h4>INPUT DATA ASSESSMENT</h4>
-        <p> 1.Were the number, length and quality of the reads obtained in line with what would be expected for the
-            sequencing platform used?</p>
-        <P>Yes - </P>
-        <p>2.Was the input dataset of sufficiently good quality to perform the analysis?
-            Yes- Because all the sequences had a pass in the sequence quality also, no much work was done in
-            pre-proccessing
-        </p>
-        <p>3.How did the reads’ quality and GC content affect the way analysis was run?
-        </p>
+           </div>
+           <p>How did the GC content affect analysis?</p>
+          
+       </ul>
     </div>
     <div id="quiz2">
-        <h4>OPERATIONAL ASSESSMENT</h4>
-        <ol>
-            <li>Was the choice affected by the nature and/or quality of the reads?</li>
-            <li>Was the choice made due to the time and cost of the analysis?</li>
-            <li>What are the accuracy and performance considerations for the chosen piece of software?
-            </li>
-           
-        </ol>
-
-
+        <h4>Operational Assessment</h4>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
+   
     <footer>
         <div class="crit">
             <h5>Critique</h5>
             <ol>
                 <li>PEAR is slightly slower than UPARSE</li>
                 <li>UCHIME is more accurate in chimera detection than Chimeraslayer</li>
-                <li>QIIME2 requires a manifest file which you have to put all sample ids, their absolute paths and direction of
+                <li>QIIME2 requires a manifest file which you have to put all sample ids, their absolute paths and
+                    direction of
                     sequences which could be taxing</li>
                 <li>pyNAST requires python version 2.7-2.8 to install</li>
                 <li>Mothur is on galaxy but requires fast internet.</li>
@@ -106,8 +187,9 @@
         <ul>
             <li>Uparse had an accurate algorithmn for pairing that PEAR(96%)</li>
             <li>41% of chimeras detected</li>
-            <li>Quality scores for both raw reaads and trimmed reads were high inferring that sequencing plattform was good and primers </li>
-           
+            <li>Quality scores for both raw reaads and trimmed reads were high inferring that sequencing plattform was
+                good and primers </li>
+
         </ul>
     </footer>
 </body>
