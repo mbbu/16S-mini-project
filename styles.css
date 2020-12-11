@@ -19,7 +19,7 @@ height: 68%;
 h4, h5{
     text-align: center;
     color: blue;
-    font-size: 10px;
+    font-size: 9px;
 }
 a{
     font-size: 0.6rem;
@@ -30,4 +30,5 @@ a{
 }
 *{
     scroll-behavior: smooth;
+  
 }
