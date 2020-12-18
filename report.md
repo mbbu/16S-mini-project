@@ -30,7 +30,7 @@ Time- Trimmomatic took 10 minutes whereas Prinseq took 6 minutes.
 
 Pros - Give trimming options
 Cons - 
-![](images/key.png)
+[<img src="images/emperor(12).png">](images/emperor(12).png)
 
 
 
