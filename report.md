@@ -30,6 +30,9 @@ Time- Trimmomatic took 10 minutes whereas Prinseq took 6 minutes.
 
 Pros - Give trimming options
 Cons - 
+[<img src="images/key.png">]
+[image](images/key.png)
+
 
 
 #####  Chimera detection
