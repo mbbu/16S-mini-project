@@ -228,6 +228,8 @@ qiime diversity beta-group-significance \
 #Train classifier using SILVA
 #bash ../scripts/train_classifier_silva.sh
 
+cd ..
+
 #Train Classifier using Greengenes
 bash ../scripts/train_classifier_gg.sh
 
