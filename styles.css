@@ -16,13 +16,13 @@ height: 68%;
     top:-55px;
 
 }
-h4, h5{
+h4, h5 , h3{
     text-align: center;
     color: blue;
     font-size: 9px;
 }
 a{
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     font-weight: bold;
     font-style: italic;
     
@@ -30,5 +30,7 @@ a{
 }
 *{
     scroll-behavior: smooth;
+   
+    font-weight: bold;
   
 }
