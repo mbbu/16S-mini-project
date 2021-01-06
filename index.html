@@ -47,12 +47,7 @@
     <div>
         <p>In this miniproject we created two worklows that can be used to determine microbial communities present in
             different enivironment using the 16S rRNA analysis.</p>
-        <p>Here is a summary flow chart of tools used on the workflows using three phases namely:</p>
-        <ol>
-            <li>Preprocessing Reads.</li>
-            <li>OTU picking,Classification and Phylogenetic Tree Generation.</li>
-            <li>Measure Diversity and other Statistical Analyses.</li>
-        </ol>
+       
     </div>
     <div id="quiz1">
         <h4>Input Data Assessment</h4>
@@ -70,10 +65,16 @@
 
                 </div>
             </div>
-            <p>How did the GC content affect analysis?</p>
+         
 
         </ul>
     </div>
+    <p>The flow charts below show tools used on the workflows in three phases namely:</p>
+    <ol>
+        <li>Preprocessing Reads.</li>
+        <li>OTU picking,Classification and Phylogenetic Tree Generation.</li>
+        <li>Measure Diversity and other Statistical Analyses.</li>
+    </ol>
 
     <div class="row">
         <div class="col-md-6">
@@ -131,7 +132,7 @@
     </ol>
 
     <h5>Results Analysis/Metrics Comparions</h5>
-    <p>This is a comparison of the alpha and beta diversity analyses from the two workflows.</p>
+    <p>Comparison of the Alpha and Beta diversity analyses from the two workflows.</p>
 
 
     <div class="row">
@@ -170,15 +171,15 @@
 
 
     <div class="container my-4">
-        <p>Other Images from Qiime workflow....</p>
+        <p><b>Other Images from Qiime workflow....</b></p>
 
-        <a class="btn btn-primary" href="images/level-7-bars (1).svg">Taxonomy Barplot</a>
+        <a class="btn btn-green" href="images/level-7-bars (1).svg">Taxonomy Barplot</a>
         <a class="btn btn-indigo" href="images/alpha-rarefaction.png">Alpha rarefaction/Shannon</a>
-        <a class="btn btn-indigo" href="images/rareobserved.png">Alpha rarefaction/Observed otus</a>
+        <a class="btn btn-purple" href="images/rareobserved.png">Alpha rarefaction/Observed otus</a>
         <a class="btn btn-dark-green" href="images/deblur-stats.png">Deblur Stats</a>
         <a class="btn btn-purple" href="images/tree (1).svg">Rooted Tree</a>
         <a class="btn btn-primary" href="images/tree (2).svg">Unrooted Tree</a>
-        <a class="btn btn-primary" href="images/bVc7ka1Dm3yUi2DczboC1g.svg">Circular Tree</a>
+        <a class="btn btn-purple" href="images/bVc7ka1Dm3yUi2DczboC1g.svg">Circular Tree</a>
         <a class="btn btn-primary" href="images/metadata (2).tsv">Taxonomy Table</a>
 
         <a class="btn btn-dark-green" href="images/unweighted_unifrac.png">Unifrac Unweighted</a>
@@ -190,7 +191,7 @@
 
     <footer>
         <h4>Summary</h4>
-        <ul>
+        <ul style="font-size: 0.9rem;"><strong>
             <li>Quality Filtered -Good.</li>
             <li>Trimmed-Not many reads were trimmed(roughly 24-40).</li>
             <li>99% stitched with pear.</li>
@@ -200,13 +201,17 @@
             <li>Rarefaction sequence depth- G is most dense followed by K then B.But the curve flattened.</li>
             <li>OTU correlated with any treatments or metadata - B is the most diverse(Least effective treatment cause has diverse species) followed by K
                 then G.</li>
+          
                 <p style="font-weight: bolder;">G is the most effective treatment followed by K then B is the least effective.</p>
-        </ul>
-        <div id="conc">
+            </strong>
+            </ul>
+        <div id="conc"><strong>
             <h4>Conclusion</h4>
             <p>1.QIIME end to end is better - all factors considered.</p>
-            <p>2.The other workflow is lighter and inclusive.</p>
-
+            <p>2.Generally, the two pipelines show comparative results in terms of how the different treatments affected the samples. 
+            <p>3.There was a  slight disperity in species density and diversity which is attributed to the OTU picking method used by pipelines i.e De novo vs Closed referrence.</p>
+            <p>4.The quality of reads is paramount in making the workflows reproducible.</p>
+        </strong>
         </div>
 
         <h3 style="text-align: center;">THE END!!!</h3>
