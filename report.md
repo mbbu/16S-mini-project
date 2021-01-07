@@ -1,20 +1,23 @@
 ### Workflow Analysis
 
 ### Why is this analysis necessary?
-- This workflow aims at identifying diversity of bacteria species present in samples.
+- This workflow aims to identify diversity of bacteria species present in samples.
 
-### Application
+### Application.
 We used these two pipelines to identify the efficiency of different treatments (B,G and K) on bacteria species present in 15 dog samples, each with paired reads.
 
-### Objectives
-1. To develop a 16S rRNA  analysis workflow from illumina sequencing platform.
+### Objectives.
 
+1. To develop a 16S-rRNA  analysis workflow from illumina sequencing platform.
 2. To test the pipelines.
 3. To analyse the results.
 4. To compare the tools used.
-### Methodology
 
-##### Quality check
+
+### Methodology.
+
+##### Quality Control.
+
 Purpose - Quality Control is performed to inspect the quality of sequenced reads. The quality scores will guide in trimming and filtering.
 
 Tools used -Fastqc ,Multiqc and QIIME2.
@@ -26,43 +29,106 @@ Cons- None
 Conclusion: Not much of the reads were truncated because the quality of reads was good.
 
 
-#####  Trimming and filtering reads
+#####  Trimming and Filtering reads.
+
 Purpose - To remove poor quality reads.
+
 Tools used -Trimmomatic, Prinseq and QIIME2
+
 Time Taken:Trimmomatic - 10 minutes
+
            Prinseq - 6 minutes.
            Qiime - 4 minutes
 Pros: - Trimmomatic and Prinseq provide more trimming options.
-      - Qiime tool does both the quality check,filtering and trimming in one step ; syntax is brief.
-     
-Cons:For Trimmomatic and Prinseq, the proccess and report generation is not automatic. 
 
-#####  Chimera detection
+      - Qiime tool does both the quality check, filtering and trimming in one step ; syntax is brief.
+     
+Cons: For Trimmomatic and Prinseq, the proccess and report generation is not automatic. 
+
+#####  Chimera Detection.
 Purpose - To remove chimeras which can lead to spurious results.
+
 Tools used -UCHIME, Qiime Deblur.
+
 Time Taken:UCHIME - 70 minutes.
            Deblur - 6 minutes.
 
-Pros - Deblur is fast and does chimera detection,denoising and feature table creation at once.Moreover, there is an informative report generated.
+Pros - Deblur is fast and does chimera detection, denoising and feature table creation at once.Moreover, there is an informative report generated.
+
 Cons - UCHIME requires a reference database.
-#####  OTU picking
-Purpose - To find representative sequences/Sequence Variants for the samples. This is used when assigning taxonomy.
-Tools used -USEARCH, Qiime Deblur.
+
+#####  OTU Picking.
+
+Purpose  - To find representative sequences/Sequence Variants for the samples. This is used when assigning taxonomy.
+
+Tools used - USEARCH, Qiime Deblur.
+
 Time Taken:USEARCH - 50 minutes.
            Deblur - 4 minutes.
 ```
-***usearch uses closed-reference OTU picking whereas Qiime uses De novo OTU picking.***
+Usearch uses closed-reference OTU picking whereas Qiime uses De novo OTU picking.
+Qiime picked 209 OTUS whereas USEARCH picked 216 OTUS.
 ```
-Pros - Deblur is fast and does chimera detection,denoising and feature table creation at once.Moreover, there is an informative report generated.
-Cons - USEARCH requires a reference database.
+Pros  - Deblur is fast, uses De novo OTU picking which ensures no sequences are disregarded.
+      - Deblur allows you to assign taxonomy upto subspecies level.
+   
+
+Cons  - USEARCH discards sequences that do not have a match in the reference database.
+      - The OTUS picked in USEARCH are limited to the database used.
 
 
-#####  ASV prediction
-#####  Classification and alignment
-#####  Phylogenetic analysis
-#####  Measurement of diversity
+#####  ASV Prediction.
 
-|Pipeline | Tools| Purpose | Time | Computational Resources | Pros | Cons
-| --------------- |--------------- |--------------- | --------------- |--------------- |--------------- |--------------- |
-|Qiime2 pipeline | | | | | | |
-| Usearch/Qiime workflow| | | | | | |
+Purpose  - To find representative sequences/Sequence Variants for the samples. This is used when assigning taxonomy.
+
+Tools used - Qiime Dada2.
+Time Taken:   - 60 minutes.
+          
+```
+282 sequence variants picked.
+```
+Pros  - More Accurate.
+
+
+Cons  - USEARCH discards sequences that do not have a match in the reference database.
+      - The OTUS picked in USEARCH are limited to the database used.
+
+
+#####  Classification and Alignment.
+
+Purpose  - To establish the similarities and dissimilarities between the variants picked (OTUS).
+
+Tools used - Qiime mafft and FastTree.
+Time Taken:Qiime - 10 minutes.
+
+Pros  - Both Mafft and FastTree are fast and lightweight.
+   
+
+Cons  - The phylogeny tree .
+      - The OTUS picked in USEARCH are limited to the database used.
+
+
+
+#####  Diversity.
+###### Alpha Diversity.
+Purpose  - To establish the similarities within a community or treatment.
+
+Tools used - Qiime.
+Time Taken:Qiime - 7 minutes.
+
+Pros  - The core metrics analyses generates alpha and beta diversity results in one command.
+   
+
+###### Beta Diversity.
+Purpose  - To establish the similarities within a community or treatment.
+Tools used - Qiime.
+Time Taken:Qiime - 7 minutes.
+
+Pros  - The core metrics analyses generates alpha and beta diversity results in one command.
+
+##### Results.
+To view the results generated from this project, [click here](https://mbbu.github.io/16S-mini-project/)
+
+### Conclusion.
+```From the dataset used, the results from both pipelines did not differ much. However, a bigger dataset would inform more about the most efficent pipeline to use depending on quality of results. There was a more diverse population found in samples treated with B compared to K and G (had the least diversity). This implies that treatment G was more effective compared to B because it had less bacterial populations. 
+```
