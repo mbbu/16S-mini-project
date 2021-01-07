@@ -67,7 +67,7 @@ Time Taken:USEARCH - 50 minutes.
            Deblur - 4 minutes.
 ```
 Usearch uses closed-reference OTU picking whereas Qiime uses De novo OTU picking.
-Qiime picked 209 OTUS whereas USEARCH picked 216 OTUS.
+Qiime picked 209 OTUS whereas USEARCH picked 113 OTUS.
 ```
 Pros  - Deblur is fast, uses De novo OTU picking which ensures no sequences are disregarded.
       - Deblur allows you to assign taxonomy upto subspecies level.
