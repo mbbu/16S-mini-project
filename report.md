@@ -130,5 +130,8 @@ Pros  - The core metrics analyses generates alpha and beta diversity results in 
 To view the results generated from this project, [click here](https://mbbu.github.io/16S-mini-project/)
 
 ### Conclusion.
-```From the dataset used, the results from both pipelines did not differ much. However, a bigger dataset would inform more about the most efficent pipeline to use depending on quality of results. There was a more diverse population found in samples treated with B compared to K and G (had the least diversity). This implies that treatment G was more effective compared to B because it had less bacterial populations. 
+
+```
+From the dataset used, the results from both pipelines did not differ much. However, a bigger dataset would inform more about the most efficent pipeline to use depending on quality of results. There was a more diverse population found in samples treated with B compared to K and G (had the least diversity). This implies that treatment G was more effective compared to B because it had less bacterial populations. 
+
 ```
