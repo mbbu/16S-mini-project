@@ -134,4 +134,4 @@ To view the results generated from this project, [click here](https://mbbu.githu
 **The results from both pipelines did not show significant differences on the dataset used. 
 However, a bigger dataset would inform more about the most efficent pipeline.**
 
-**There was a more diverse population found in samples treated with B compared to K and G(least diverse).*
+**There was a more diverse population found in samples treated with B compared to K and G(least diverse).**
