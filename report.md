@@ -7,7 +7,6 @@
 We used these two pipelines to identify the efficiency of different treatments (B,G and K) on bacteria species present in 15 dog samples, each with paired reads.
 
 ### Objectives.
-
 1. To develop a 16S-rRNA  analysis workflow from illumina sequencing platform.
 2. To test the pipelines.
 3. To analyse the results.

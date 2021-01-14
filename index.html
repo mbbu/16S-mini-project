@@ -32,6 +32,7 @@
 </head>
 
 <body>
+    <div class="container">
     <h4>16S rRNA WORKFLOW REPORT</h4>
 
     <div class="intro">
@@ -49,6 +50,17 @@
             different enivironment using the 16S rRNA analysis.</p>
        
     </div>
+
+    <div class="obj">
+        <h3>Objectives.</h3>
+        <ol>
+            <li>To develop a 16S-rRNA  analysis workflow.</li>
+            <li>To test the pipelines developed.</li>
+            <li>To analyse the results.</li>
+            <li>To compare the tools used.</li>
+
+        </ol>
+    </div>
     <div id="quiz1">
         <h4>Input Data Assessment</h4>
         <ul>
@@ -64,6 +76,7 @@
                     <p style="text-align: center;">After Trimmomatic</p>
 
                 </div>
+                <p>The reads before trimming had an error rate (EE) mean of 3.5 (R2) compared to forward reads which had an E.E mean of about 0.5. The error rate mean reduced to 0.2 for R1 and 0.7 for R2. </p>
             </div>
          
 
@@ -79,7 +92,7 @@
     <div class="row">
         <div class="col-md-6">
             <h4>QIIME Workflow</h4>
-            <img src="images/E2E QIIME.png" style=" border: 5px solid #555; height: 500px;" alt="qiime workflow">
+            <img src="images/E2E QIIME.png" style=" border: 5px solid #555; height: 800px;" alt="qiime workflow">
             <h5>Runtime Analysis</h5>
             <ul>
                 <li>Time Taken: 106mins</li>
@@ -90,7 +103,7 @@
         </div>
         <div class="col-md-6">
             <h4>Multiple-Tools Workflow</h4>
-            <img src="images/uchime.png" style=" border: 5px solid #555; height: 500px;" alt="uparse/uchime">
+            <img src="images/uchime.png" style=" border: 5px solid #555; height: 800px;" alt="uparse/uchime">
             <h5>Runtime Analysis</h5>
             <ul>
                 <li>Time Taken - 2.5 hrs.</li>
@@ -120,9 +133,9 @@
             produces 4 outputs.</li>
         <li>UCHIME vs Chimeraslayer: Uchime is faster and detects more chimeras than Chimeraslayer which also requires
             different formats.</li>
-        <li>UPARSE vs QIIME : Qiime picked 209 OTUS while UPARSE had 190 OTUS.</li>
+        <li>UPARSE vs QIIME : Qiime picked 209 OTUS while UPARSE had 190 OTUS.DADA2 pipeline picked 320 ASVs. </li>
 
-        <li>UCLUST vs QIIME: UCLUST uses less time than QIIME.</li>
+        <li>UCLUST vs QIIME: UCLUST uses less time than QIIME. We opted to use UPARSE</li>
         <li>QIIME vs Mothur : Mothur deletes all reads in the preparation stage whereas QIIME picked 209 OTUS using
             deblur plugin.</li>
         <a
@@ -209,13 +222,14 @@
             <h4>Conclusion</h4>
             <p>1.QIIME end to end is better - all factors considered.</p>
             <p>2.Generally, the two pipelines show comparative results in terms of how the different treatments affected the samples. 
-            <p>3.There was a  slight disperity in species density and diversity which is attributed to the OTU picking method used by pipelines i.e De novo vs Closed referrence.</p>
-            <p>4.The quality of reads is paramount in making the workflows reproducible.</p>
+            <p>3.There was a  slight disperity in species density and diversity which is attributed to the OTU picking method used by pipelines.</p>
+            <p>4.The quality of reads is paramount. </p>
         </strong>
         </div>
 
         <h3 style="text-align: center;">THE END!!!</h3>
     </footer>
+</div>
 </body>
 
 </html>

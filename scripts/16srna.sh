@@ -68,6 +68,8 @@ usearch -otutab usearch_merge/merged.fastq -zotus zotus.fastq -otutabout zotutab
 #usearch -otutab_rare otutab.txt -output otutab_norm.txt
 #usearch -zotutab_rare zotutab.txt -output zotutab_norm.txt
 
+
+#  Using SINA to perform Alignment.
 # Align the sequences with an ARB file-format database
 #Convert the silva database into an ARB file-format database.
 #sina -i silva.bacteria.fasta -o silva.bacteria.arb --prealigned
