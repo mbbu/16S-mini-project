@@ -128,12 +128,12 @@
 
     <h5>Alternative Tools Critique</h5>
     <ol>
-        <li>Trimmomatic vs Prinseq: No difference in fastqc results. </li>
-        <li>UPARSE (96% merged) vs PEAR(99% merged): UPARSE does not require input of reverse reads unlike PEAR. PEAR
+        <li>Trimmomatic vs Prinseq: Trimmomatic improved quality after trimming but prinseq did not trim anything.</li>
+        <li>UPARSE (98% merged) vs PEAR(99% merged): UPARSE does not require input of reverse reads unlike PEAR. PEAR
             produces 4 outputs.</li>
         <li>UCHIME vs Chimeraslayer: Uchime is faster and detects more chimeras than Chimeraslayer which also requires
             different formats.</li>
-        <li>UPARSE vs QIIME : Qiime picked 209 OTUS while UPARSE had 190 OTUS.DADA2 pipeline picked 320 ASVs. </li>
+        <li>UPARSE vs QIIME : Qiime picked 209 OTUS while UPARSE had 190 OTUS.DADA2 pipeline picked 314 ASVs. </li>
 
         <li>UCLUST vs QIIME: UCLUST uses less time than QIIME. We opted to use UPARSE</li>
         <li>QIIME vs Mothur : Mothur deletes all reads in the preparation stage whereas QIIME picked 209 OTUS using
