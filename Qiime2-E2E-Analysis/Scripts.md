@@ -18,7 +18,7 @@ This script is an automatic manifest file maker which has one argument, the fold
 
 _train_classifier_gg.sh and train_classfier_silva.sh_
 
-Both these scripts train classifiers using the Naive-Bayes model. To assign taxonomies to the feature table created earlier on in the main script, it is important to have a classifier which is used to assign taxonomies to the reads so as to determine their abundances. The only difference is the database being used. The train_classifier_gg.sh uses Greengenes as its database which the train_classifier_silva.sh uses SILVA as its database. While both do exactly the same thing, they take different times depending on how wide the database is.
+Both these scripts train classifiers using the Naive-Bayes model. To assign taxonomies to the feature table created earlier on in the main script, it is important to have a classifier which is used to assign taxonomies to the reads so as to determine their abundances. The only difference is the database being used. The train_classifier_gg.sh uses Greengenes as its database while the train_classifier_silva.sh uses SILVA as its database. While both do exactly the same thing, they take different times depending on how wide the database is.
 
 _phyloseq.sh_
 
