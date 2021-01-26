@@ -3,7 +3,7 @@
 
 _download.sh_
 
-This scripts makes a parent directory of the sample data file and downloads the practice sample data reads from the H3eaBionet website and the accompanying sample metadata file.
+This script makes a parent directory of the sample data file and downloads the practice sample data reads from the H3eaBionet website and the accompanying sample metadata file.
 
 _16srna-dada2.sh and 16srna-deblur.sh_
 
