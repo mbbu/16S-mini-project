@@ -22,13 +22,16 @@ function download_dataset() {
     do
         read1File="Dog${number}_R1.fastq"
         read2File="Dog${number}_R2.fastq"
-        echo "##### Downloading ${read1File} from ${dataset_uri}${read1File} #####" && wget ${dataset_uri}${read1File}
-        echo "##### Downloading ${read2File} from ${dataset_uri}${read2File} #####" && wget ${dataset_uri}${read2File}
+        echo "##### Downloading ${read1File} from ${dataset_uri}${read1File} #####" && wget ${dataset_uri}${read1File} &
+        echo "##### Downloading ${read2File} from ${dataset_uri}${read2File} #####" && wget ${dataset_uri}${read2File} &
+
 
     done
 }
 
-download_dataset
+download_dataset &
+
+wait
 
 cd ../ && mkdir backup_data
 
