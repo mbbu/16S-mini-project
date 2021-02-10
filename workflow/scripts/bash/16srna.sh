@@ -2,7 +2,6 @@
 
 
 # The perform_fastqc function below does the FastQc operation on a sample_data
-
 function perform_fastqc() {
     # Below is a description of the positional arguments
     # $1 >> is the path to the data for the fastq analysis
