@@ -36,11 +36,12 @@ Datasets used for this workflow can be found [here](http://h3data.cbio.uct.ac.za
 For you to be able to follow this workflow;
 
 1. Clone this repository locally, then 
-> cd "path/to/project/16S-mini-project" && bash start.sh
 
-Once you do this, sit back, relax and sip some coffee or water :blush:, its going to take a while. 
+        cd "path/to/project/16S-mini-project" && bash start.sh
 
-6. End to End 16S RNA analysis can also be done using Qiime2 feature tools only. This analysis produces different core metrics alpha and beta analyses as well as explores different microbial profiles by assigning taxonomies. To follow this kind route, activate the Qiime2-2020.8 environment, `cd` into Qiime2-E2E-Analysis and `bash scripts/16srna-deblur.sh` to do denoising using deblur or `bash scripts/16srna-dada2.sh` to denoise using dada2. The scripts follow a download of datasets to analysis end of Qiime2. Please ensure that you read the documentation for each of the scripts used before running them. The automatic manifest file maker was adapted [from this repo](https://github.com/Micro-Biology/BasicBashCode/blob/master/BasicScripts/Q2_manifest_maker.py) The script that exports Qiime2 artifacts into objects that can be used with phyloseq was adopted from [this tutorial](http://john-quensen.com/tutorials/processing-16s-sequences-with-qiime2-and-dada2/). More information about importing dada2 artifacts into phyloseq can also be obtained [from here.](http://john-quensen.com/r/import-dada2-asv-tables-into-phyloseq/)
+      Once you do this, sit back, relax and sip some coffee or water :blush:, its going to take a while. 
+
+2. End to End 16S RNA analysis can also be done using Qiime2 feature tools only. This analysis produces different core metrics alpha and beta analyses as well as explores different microbial profiles by assigning taxonomies. To follow this kind route, activate the Qiime2-2020.8 environment, `cd` into Qiime2-E2E-Analysis and `bash scripts/16srna-deblur.sh` to do denoising using deblur or `bash scripts/16srna-dada2.sh` to denoise using dada2. The scripts follow a download of datasets to analysis end of Qiime2. Please ensure that you read the documentation for each of the scripts used before running them. The automatic manifest file maker was adapted [from this repo](https://github.com/Micro-Biology/BasicBashCode/blob/master/BasicScripts/Q2_manifest_maker.py) The script that exports Qiime2 artifacts into objects that can be used with phyloseq was adopted from [this tutorial](http://john-quensen.com/tutorials/processing-16s-sequences-with-qiime2-and-dada2/). More information about importing dada2 artifacts into phyloseq can also be obtained [from here.](http://john-quensen.com/r/import-dada2-asv-tables-into-phyloseq/)
 
 
 
