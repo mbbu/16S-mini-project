@@ -38,3 +38,6 @@ cd ../ && mkdir backup_data
 echo "Creating a backup of the sample data"
 
 cp -r sample_data backup_data # create a backup of the sample data into the backup_data directory
+
+echo "#### Now Executing the 16srna analysis script ####"
+cd workflow/scripts/bash && bash 16srna.sh
