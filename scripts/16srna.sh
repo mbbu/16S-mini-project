@@ -79,13 +79,17 @@ usearch -otutab usearch_merge/merged.fastq -zotus zotus.fastq -otutabout zotutab
 #Convert Otu reads into qiime2 artifact
 qiime tools import --input-path otus.fastq --output-path otus.qza --type 'FeatureData[Sequence]'
 #Perform Alignment using Mafft
-qiime alignment mafft --i-sequences otus.qza --o-alignment aligned_otus.qza
 #Masking sites (because in the alignment some sites are not phylogenetically informative)
-qiime alignment mask --i-alignment aligned_otus.qza --o-masked-alignment masked_aligned_otus.qza
 #Create Phylogeny tree using FastTree
-qiime phylogeny fasttree --i-alignment masked_aligned_otus.qza --o-tree unrooted_tree.qza
 #Midpoint-rooting of the Phylogeny tree
-qiime phylogeny midpoint-root --i-tree unrooted_tree.qza --o-rooted-tree rooted-tree.qza
+#All above in one process
+qiime phylogeny align-to-tree-mafft-fasttree \
+  --i-sequences otus.qza \
+  --o-alignment aligned_otus.qza \
+  --o-masked-alignment masked_aligned_otus.qza \
+  --o-tree unrooted_tree.qza \
+  --o-rooted-tree rooted-tree.qza
+
 # qiime tools export unrooted-tree.qza --output-dir exported-tree
 #Convert Otu table into a qiime2 Artifact
 biom convert -i otutab.txt -o otu_table.from_txt_hdf5.biom --table-type="OTU table" --to-hdf5
